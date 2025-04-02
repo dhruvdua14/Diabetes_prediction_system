@@ -81,7 +81,7 @@ if(selected == 'Prediction for Old Generation'):
         
         
         
- # diabetes prediction for pregnant ladies
+
        
         
  # diabetes prediction for pregnant ladies
@@ -98,25 +98,25 @@ if(selected == 'Prediction for Pregnant ladies'):
     with col1:
         Pregnancies = st.text_input('Number of Pregnancies')
                 
-    with col1:
+    with col2:
         Glucose = st.text_input('Glucose level')
                 
-    with col1:
+    with col3:
         BloodPressure = st.text_input('Blood Pressure value') 
                 
     with col1:
         SkinThickness = st.text_input('Skin Thickness value')    
                 
-    with col1:
+    with col2:
         Insulin = st.text_input('Insulin level')    
                 
-    with col1:
+    with col3:
         BMI = st.text_input('BMI value')    
                 
     with col1:
         DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')    
                 
-    with col1:
+    with col2:
         Age = st.text_input('Age of the Person')    
                 
             
