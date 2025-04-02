@@ -41,25 +41,25 @@ if(selected == 'Prediction for Old Generation'):
     with col1:
         gender = st.text_input('Gender of the Person')
             
-    with col1:
+    with col2:
         age = st.text_input('Age of the Person')
             
-    with col1:
+    with col3:
         hypertension = st.text_input('Hypertension') 
             
     with col1:
         heart_disease = st.text_input('Heart Disease')    
             
-    with col1:
+    with col2:
         smoking_history = st.text_input('Smoking History')    
             
-    with col1:
+    with col3:
         bmi = st.text_input('BMI value')    
             
     with col1:
         HbA1c_level = st.text_input('HbA1c level of the Person')    
             
-    with col1:
+    with col2:
         blood_glucose_level = st.text_input('Glucose level of the Person')    
             
         
@@ -95,25 +95,25 @@ if(selected == 'Prediction for Pregnant ladies'):
      with col1:
          Pregnancies = st.text_input('Number of Pregnancies')
                 
-     with col1:
+     with col2:
          Glucose = st.text_input('Glucose level')
                 
-     with col1:
+     with col3:
          BloodPressure = st.text_input('Blood Pressure value') 
                 
      with col1:
          SkinThickness = st.text_input('Skin Thickness value')    
                 
-     with col1:
+     with col2:
          Insulin = st.text_input('Insulin level')    
                 
-     with col1:
+     with col3:
          BMI = st.text_input('BMI value')    
                 
      with col1:
          DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')    
                 
-     with col1:
+     with col2:
          Age = st.text_input('Age of the Person')    
                 
             
