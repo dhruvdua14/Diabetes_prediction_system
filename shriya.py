@@ -39,9 +39,9 @@ with st.sidebar:
     
     
     # diabetes prediction for pregnant ladies
-    if(selected == 'Prediction for Pregnant ladies'):
+if(selected == 'Prediction for Pregnant ladies'):
         # page title
-        st.title('Diabetes Prediction for Dataset - 2')
+    st.title('Diabetes Prediction for Dataset - 2')
             
         # getting the input data from the user
     col1, col2, col3 = st.columns(3)
