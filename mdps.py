@@ -15,7 +15,7 @@ from streamlit_option_menu import option_menu
 
 diabetes_model_one = pickle.load(open('trained_model.sav', 'rb'))
 
-diabetes_model_two = pickle.load(open('diabetes_model.sav', 'rb'))
+diabetes_model_two = pickle.load(open('trained_model (3).sav', 'rb'))
 
 
 # sidebar for navigation
