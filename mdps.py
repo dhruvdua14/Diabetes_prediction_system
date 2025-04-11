@@ -4,7 +4,7 @@ Created on Wed Apr  2 01:48:34 2025
 
 @author: Dell
 """
-
+import numpy as np
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
