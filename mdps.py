@@ -8,13 +8,13 @@ import numpy as np
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
-
+from sklearn.preprocessing import StandardScaler
 
 
 # loading the saved models
 
 diabetes_model_one = pickle.load(open('trained_model.sav', 'rb'))
-
+scaler = pickle.load(open('scaler.sav', 'rb'))
 
 
 
@@ -78,8 +78,11 @@ if(selected == 'Prediction for Old Generation'):
        # Reshape the input data to 2D array
         input_data_reshaped = np.array(input_data).reshape(1, -1) # This creates a 2D array with one sample
 
+        # Standardize the input data
+        input_data_standardized = scaler.transform(input_data_reshaped)
+        
        # Make the prediction
-        diab_prediction = diabetes_model_one.predict(input_data_reshaped)
+        diab_prediction = diabetes_model_one.predict(input_data_standardized)
         
         if(diab_prediction[0] == 0):
             diab_diagnosis = 'The person is not diabetic'
