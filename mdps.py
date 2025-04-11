@@ -40,28 +40,28 @@ if(selected == 'Prediction for Old Generation'):
     col1, col2, col3 = st.columns(3)
         
     with col1:
-        gender = st.text_input('Gender of the Person')
+        gender = int(st.text_input('Gender of the Person'))
             
     with col2:
-        age = st.text_input('Age of the Person')
+        age = int(st.text_input('Age of the Person'))
             
     with col3:
-        hypertension = st.text_input('Hypertension') 
+        hypertension = int(st.text_input('Hypertension')) 
             
     with col1:
-        heart_disease = st.text_input('Heart Disease')    
+        heart_disease = int(st.text_input('Heart Disease'))    
             
     with col2:
-        smoking_history = st.text_input('Smoking History')    
+        smoking_history = int(st.text_input('Smoking History'))    
             
     with col3:
-        bmi = st.text_input('BMI value')    
+        bmi = float(st.text_input('BMI value'))    
             
     with col1:
-        HbA1c_level = st.text_input('HbA1c level of the Person')    
+        HbA1c_level = float(st.text_input('HbA1c level of the Person'))    
             
     with col2:
-        blood_glucose_level = st.text_input('Glucose level of the Person')    
+        blood_glucose_level = float(st.text_input('Glucose level of the Person'))    
             
   
         
@@ -73,7 +73,13 @@ if(selected == 'Prediction for Old Generation'):
     # creating a button for Prediction
         
     if st.button('Diabetes Test Result'):
-        diab_prediction = diabetes_model_one.predict([gender, age, hypertension, heart_disease, smoking_history, bmi, HbA1c_level, blood_glucose_level])
+        input_data = [gender, age, hypertension, heart_disease, smoking_history, bmi, HbA1c_level, blood_glucose_level]
+
+       # Reshape the input data to 2D array
+        input_data_reshaped = [input_data]  # This creates a 2D array with one sample
+
+       # Make the prediction
+        diab_prediction = diabetes_model_one.predict(input_data_reshaped)
         
         if(diab_prediction[0] == 1):
             diab_diagnosis = 'The person is diabetic'
