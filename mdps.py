@@ -76,7 +76,7 @@ if(selected == 'Prediction for Old Generation'):
         input_data = [gender, age, hypertension, heart_disease, smoking_history, bmi, HbA1c_level, blood_glucose_level]
 
        # Reshape the input data to 2D array
-        input_data_reshaped = input_data.reshape(1,-1) # This creates a 2D array with one sample
+        input_data_reshaped = np.array(input_data).reshape(1, -1) # This creates a 2D array with one sample
 
        # Make the prediction
         diab_prediction = diabetes_model_one.predict(input_data_reshaped)
