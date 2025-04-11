@@ -40,28 +40,28 @@ if(selected == 'Prediction for Old Generation'):
     col1, col2, col3 = st.columns(3)
         
     with col1:
-        gender = int(st.text_input('Gender of the Person'))
+        gender = st.text_input('Gender of the Person')
             
     with col2:
-        age = int(st.text_input('Age of the Person'))
+        age = st.text_input('Age of the Person')
             
     with col3:
-        hypertension = int(st.text_input('Hypertension')) 
+        hypertension = st.text_input('Hypertension') 
             
     with col1:
-        heart_disease = int(st.text_input('Heart Disease'))    
+        heart_disease = st.text_input('Heart Disease')   
             
     with col2:
-        smoking_history = int(st.text_input('Smoking History'))    
+        smoking_history = st.text_input('Smoking History')    
             
     with col3:
-        bmi = float(st.text_input('BMI value'))    
+        bmi = st.text_input('BMI value')    
             
     with col1:
-        HbA1c_level = float(st.text_input('HbA1c level of the Person'))    
+        HbA1c_level = st.text_input('HbA1c level of the Person')    
             
     with col2:
-        blood_glucose_level = float(st.text_input('Glucose level of the Person'))    
+        blood_glucose_level = st.text_input('Glucose level of the Person')    
             
   
         
