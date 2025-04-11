@@ -81,10 +81,10 @@ if(selected == 'Prediction for Old Generation'):
        # Make the prediction
         diab_prediction = diabetes_model_one.predict(input_data_reshaped)
         
-        if(diab_prediction[0] == 1):
-            diab_diagnosis = 'The person is diabetic'
-        else:
+        if(diab_prediction[0] == 0):
             diab_diagnosis = 'The person is not diabetic'
+        else:
+            diab_diagnosis = 'The person is diabetic'
                 
     st.success(diab_diagnosis)
         
